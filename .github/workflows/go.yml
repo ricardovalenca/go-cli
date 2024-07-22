@@ -1,5 +1,11 @@
 name: hello-world
-on: push
+on:
+  workflow_dispatch:
+    inputs:
+      example_input:
+        description: 'A sample input for the workflow'
+        required: false
+        default: 'default value'
 jobs:
   my-job:
     runs-on: ubuntu-latest
